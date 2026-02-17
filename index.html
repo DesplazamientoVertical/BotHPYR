@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bot Emocional Compartido</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <h1>🤖 Bot emocional compartido</h1>
+          <p>Un solo bot para todas las personas conectadas en tiempo real.</p>
+        </div>
+        <div class="presence" id="presenceCount">0 conectados</div>
+      </header>
+
+      <section class="panel">
+        <aside class="emotion-card">
+          <h2>Estado interno del bot</h2>
+          <div class="emotion-item">
+            <span>😊 Felicidad</span>
+            <progress id="happinessBar" max="100" value="50"></progress>
+            <strong id="happinessValue">50</strong>
+          </div>
+          <div class="emotion-item">
+            <span>😡 Enojo</span>
+            <progress id="angerBar" max="100" value="10"></progress>
+            <strong id="angerValue">10</strong>
+          </div>
+          <div class="emotion-item">
+            <span>😢 Tristeza</span>
+            <progress id="sadnessBar" max="100" value="20"></progress>
+            <strong id="sadnessValue">20</strong>
+          </div>
+          <p id="moodLabel" class="mood-label">Estado actual: Neutral</p>
+        </aside>
+
+        <section class="chat-card">
+          <div id="chat" class="chat"></div>
+          <form id="chatForm" class="chat-form">
+            <input id="messageInput" maxlength="280" placeholder="Escribí un mensaje al bot compartido..." required />
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
